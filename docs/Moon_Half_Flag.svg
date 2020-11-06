@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" onload="init(evt)">
+<title>月半三色旗</title>
+<g x="0" stroke-width='0'>
+	<rect id="1" fill="blue" />
+	<rect id="2" fill="white" />
+	<rect id="3" fill="red" />
+</g>
+<svg id="mh" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" onload="init(evt)">
+	<path id="stroke" fill="none" />
+	<path id="fill" stroke-width="0" />
+	<script language="JavaScript"><![CDATA[
+
+	// CONFIG
+	function getArg(name) {
+	    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)")
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) {
+	        return r[2];
+	    }
+	    return null;
+	}
+	var h = Number(getArg('h')) || 300;
+	var w = h * 3 / 2;
+	var dh = h / 3;
+	var radius = dh / 3;
+	var stroke = dh / 30;
+	var main_color = 'black';
+	var dtc = dh / 2 - radius - stroke;
+
+	// CONSTS
+	var PHI = (Math.sqrt(5) - 1) / 2;
+	var _PHI = 1 - PHI;
+	var DEGREES = 180 / Math.PI;
+
+	/*
+	      p3
+	     / |
+	p1-p2-p4-p6
+	     \ |
+	      p5
+	*/
+
+	var l35 = radius * Math.sqrt(1 - PHI * PHI / 4);
+
+	var p1 = [0, radius];
+	var p2 = [radius * _PHI, radius];
+	var p3 = [radius * (_PHI + 3) / 2, radius - l35];
+	var p4 = [radius, radius];
+	var p5 = [radius * (_PHI + 3) / 2, radius + l35];
+	var p6 = [radius * 2, radius];
+	for (var p of [p1, p2, p3, p4, p5, p6]) {
+		p[0] += stroke + dtc;
+		p[1] += stroke + dtc;
+	}
+
+	var wh = (radius + stroke + dtc) * 2; // width & height
+
+	var stroke_d = `
+	M ${p1[0]} ${p1[1]}
+	L ${p2[0]} ${p2[1]}
+	A ${radius} ${radius} 0 0 1 ${p3[0]} ${p3[1]}
+	A ${radius} ${radius} 0 0 0 ${p4[0]} ${p4[1]}
+	L ${p2[0]} ${p2[1]}
+	A ${radius} ${radius} 0 0 0 ${p5[0]} ${p5[1]}
+	A ${radius} ${radius} 0 0 1 ${p4[0]} ${p4[1]}
+	L ${p6[0]} ${p6[1]}
+	Z
+	`; // path-d(stroke)
+
+	var fill_d =`
+	M ${p2[0]} ${p2[1]}
+	A ${radius} ${radius} 0 0 1 ${p3[0]} ${p3[1]}
+	A ${radius} ${radius} 0 0 0 ${p4[0]} ${p4[1]}
+	L ${p2[0]} ${p2[1]}
+	Z
+	`; // path-d(fill)
+
+	function init(evt) {
+
+		var svgRoot = evt.target.ownerDocument.rootElement;
+
+		svgRoot.setAttribute('width', wh);
+		svgRoot.setAttribute('height', wh);
+
+		svgRoot.getElementById('stroke').setAttribute('stroke', main_color);
+		svgRoot.getElementById('stroke').setAttribute('stroke-width', String(stroke));
+		svgRoot.getElementById('stroke').setAttribute('d', stroke_d);
+
+		svgRoot.getElementById('fill').setAttribute('fill', main_color);
+		svgRoot.getElementById('fill').setAttribute('d', fill_d);
+
+	}
+
+	]]></script>
+</svg>
+<script language="JavaScript"><![CDATA[
+
+function getArg(name) {
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)")
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return r[2];
+    }
+    return null;
+}
+
+var h = Number(getArg('h')) || 300;
+var w = h * 3 / 2;
+var dh = h / 3;
+
+function init(evt) {
+
+	var svgRoot = evt.target.ownerDocument.rootElement;
+
+	svgRoot.setAttribute('height', h);
+	svgRoot.setAttribute('width', w);
+
+	for (var id of [1, 2, 3]) {
+		svgRoot.getElementById(String(id)).setAttribute('y', dh * (id - 1));
+		svgRoot.getElementById(String(id)).setAttribute('height', dh);
+		svgRoot.getElementById(String(id)).setAttribute('width', w);
+	}
+
+	var mhr = dh / 3;
+	var mhstr = dh / 30;
+	var mhdtc = dh / 2 - mhr - mhstr;
+	svgRoot.getElementById('mh').setAttribute('width', String(dh));
+	svgRoot.getElementById('mh').setAttribute('height', String(dh));
+	svgRoot.getElementById('mh').setAttribute('x', String((w - dh) / 2));
+	svgRoot.getElementById('mh').setAttribute('y', String(dh));
+
+}
+
+]]></script>
+</svg>

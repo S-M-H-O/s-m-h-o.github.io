@@ -16,10 +16,10 @@ SMHO的组徽是**黄金月半**，组旗是**月半三色旗**，组歌是**《
 
 黄金月半是SMHO的组徽，由两个半径相等的、圆心相距约0.618倍半径的圆弧和一条长度为两倍半径的、右端点与右圆圆心重合的线段组成。上半部分为实心，下半部分为空心。
 
-标准的黄金月半（`.svg`）可以在此处下载（进入页面->右键->存储页面）：
+标准的黄金月半（`.svg`）可以在[此处](./Golden_Moon_Half.html)下载：
 
 ```
-https://s-m-h-o.github.io/Golden_Moon_Half.svg?r=...&stroke=...&color=...&dtc=...
+https://s-m-h-o.github.io/Golden_Moon_Half.html?r=...&stroke=...&color=...&dtc=...
 ```
 
 其中参数的解释如下：
@@ -35,10 +35,10 @@ https://s-m-h-o.github.io/Golden_Moon_Half.svg?r=...&stroke=...&color=...&dtc=..
 
 月半三色旗是SMHO的组旗，由象征**自由**、**平等**、**博爱**的红白蓝三色以及中央的黄金月半组成。
 
-标准的月半三色旗可以在此处下载（进入页面->右键->存储页面）：
+标准的月半三色旗可以在[此处](./Moon_Half_Flag.html)下载：
 
 ```
-https://s-m-h-o.github.io/Moon_Half_Flag.svg?h=...
+https://s-m-h-o.github.io/Moon_Half_Flag.html?h=...
 ```
 
 其中，参数`h`表示旗高，默认为300。
@@ -47,9 +47,12 @@ https://s-m-h-o.github.io/Moon_Half_Flag.svg?h=...
 
 月半永存是SMHO的组歌。
 
-原版《月半永存》可以在[这里](./月半永存.mp3)找到；您也可以在[这里](./Moon-Half Forever (Remix).m4a)找到《月半永存》的Remix版本。
+下面是一组资源：
 
-原版《月半永存》的乐谱（不含歌词）可以在[这里](./月半永存.pdf)找到；只包含旋律和歌词的乐谱可以在[这里](./月半永存 - 旋律.pdf)找到。
+- [原版《月半永存》音频](./月半永存.mp3)
+- [《月半永存(Remix)》音频](./Moon-Half%20Forever%20(Remix).m4a)
+- [原版《月半永存》完整乐谱](./月半永存.pdf)
+- [只包含旋律和歌词的《月半永存》乐谱](./月半永存_旋律.pdf)
 
 ## SMHO的其他成就
 

@@ -35,7 +35,7 @@ https://s-m-h-o.github.io/Golden_Moon_Half.html?r=...&stroke=...&color=...&dtc=.
 
 月半三色旗是SMHO的组旗，由象征**自由**、**平等**、**博爱**的红白蓝三色以及中央的黄金月半组成。
 
-标准的月半三色旗可以在[此处](./Moon_Half_Flag.html)下载：
+标准的月半三色旗（`.svg`）可以在[此处](./Moon_Half_Flag.html)下载：
 
 ```
 https://s-m-h-o.github.io/Moon_Half_Flag.html?h=...

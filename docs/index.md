@@ -4,8 +4,6 @@ title: '首页'
 
 # S.M.H.O.
 
-![SMHO 2周年](./SMHO_2nd.jpg)
-
 ## 简介
 
 **小月半组织** (*Small Moon-Half Organisation*, **SMHO**) 由月半大仙（化名）创立于**2018年12月19日**，后来把每年的12月19日称为**SMHO周年纪念日**。

@@ -1,0 +1,22 @@
+
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" width="156" height="156">
+            <path id="stroke" fill="none" stroke="white" stroke-width="7" d="
+        M 8 78
+        L 34.73762078750735 78
+        A 70 70 0 0 1 126.36881039375368 11.42604385933926
+        A 70 70 0 0 0 78 78
+        L 34.73762078750735 78
+        A 70 70 0 0 0 126.36881039375368 144.57395614066075
+        A 70 70 0 0 1 78 78
+        L 148 78
+        Z
+        "></path>
+            <path id="fill" stroke-width="0" fill="white" d="
+        M 34.73762078750735 78
+        A 70 70 0 0 1 126.36881039375368 11.42604385933926
+        A 70 70 0 0 0 78 78
+        L 34.73762078750735 78
+        Z
+        "></path>
+        </svg>
+    
